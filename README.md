@@ -10,8 +10,8 @@ __________________________
 
 ### The design focuses on:
 
-Contactless operation
-Low‑cost hardware
+-Contactless operation
+-Low‑cost hardware
 Efficient water usage
 Safe isolation between control and load circuits
 __________________________
