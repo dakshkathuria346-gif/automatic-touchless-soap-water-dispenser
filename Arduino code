@@ -30,7 +30,7 @@ void loop() {
   Serial.print(distance);
   Serial.println(" cm");
 
-  // 👉 Distance directly checked here
+  //  Distance directly checked here
   if (distance > 0 && distance < 12) {
 
     // SOAP
