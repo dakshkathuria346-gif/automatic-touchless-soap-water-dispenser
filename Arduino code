@@ -1,0 +1,71 @@
+// -------- PIN DEFINITIONS --------
+#define TRIG_PIN 10
+#define ECHO_PIN 11
+
+#define SOAP_RELAY 6     // Active LOW
+#define WATER_RELAY 7    // Active LOW
+
+// -------- SETUP --------
+void setup() {
+  Serial.begin(9600);
+
+  pinMode(TRIG_PIN, OUTPUT);
+  pinMode(ECHO_PIN, INPUT);
+
+  pinMode(SOAP_RELAY, OUTPUT);
+  pinMode(WATER_RELAY, OUTPUT);
+
+  // Relays OFF initially
+  digitalWrite(SOAP_RELAY, HIGH);
+  digitalWrite(WATER_RELAY, HIGH);
+
+  Serial.println("Handwash System Ready");
+}
+
+// -------- LOOP --------
+void loop() {
+  int distance = getDistance();
+
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+
+  // 👉 Distance directly checked here
+  if (distance > 0 && distance < 12) {
+
+    // SOAP
+    digitalWrite(SOAP_RELAY, LOW);
+    delay(2000);
+    digitalWrite(SOAP_RELAY, HIGH);
+
+    delay(5000);   // Rub hands time
+
+    // WATER
+    digitalWrite(WATER_RELAY, LOW);
+    delay(9000);
+    digitalWrite(WATER_RELAY, HIGH);
+
+    // Wait until hand is removed
+    while (getDistance() < 12) {
+      delay(100);
+    }
+  }
+
+  delay(100);
+}
+
+// -------- ULTRASONIC FUNCTION --------
+int getDistance() {
+  long duration;
+
+  digitalWrite(TRIG_PIN, LOW);
+  delayMicroseconds(2);
+  digitalWrite(TRIG_PIN, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(TRIG_PIN, LOW);
+
+  duration = pulseIn(ECHO_PIN, HIGH, 25000);
+  if (duration == 0) return 50;
+
+  return duration * 0.034 / 2;
+}
