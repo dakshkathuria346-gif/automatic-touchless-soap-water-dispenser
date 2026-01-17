@@ -1,10 +1,12 @@
-Automatic Soap & Water Dispenser using Arduino
+### Automatic Soap & Water Dispenser using Arduino
 
 A smart hygiene system designed to provide completely touch‑free handwashing using Arduino and ultrasonic sensing. The system automatically dispenses soap followed by water when a hand is detected, ensuring improved sanitation and reduced water wastage.
+__________________________
 
-Project Description
+### Project Description
 
 This project implements an automated hand hygiene solution using an Arduino UNO and an HC‑SR04 ultrasonic sensor. When a hand is placed within a predefined distance, the system activates relay‑controlled DC pumps to dispense soap and water sequentially.
+__________________________
 
 ### The design focuses on:
 
