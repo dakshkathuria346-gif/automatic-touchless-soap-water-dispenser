@@ -10,79 +10,79 @@ __________________________
 
 ### The design focuses on:
 
--Contactless operation
--Low‑cost hardware
-Efficient water usage
-Safe isolation between control and load circuits
+1. Contactless operation
+2. Low‑cost hardware
+3. Efficient water usage
+4. Safe isolation between control and load circuits
 __________________________
  
 ### Team Members
 
-Daksh Kathuria
-Bhavya Singla
-Deepanshi Jindal
-Shaurya (Suyash Dubey)
+1. Daksh Kathuria
+2. Bhavya Singla
+3. Deepanshi Jindal
+4. Suyash Dubey
 __________________________
  
 ### Components Used
 
-Component	Quantity	Purpose
-Arduino UNO	1	Main controller
-HC‑SR04 Ultrasonic Sensor	1	Hand detection
-Relay Module (5V)	2	Control pumps
-Mini DC Pump	2	Soap & water dispensing
-Battery Pack	1	External power for pumps
-Breadboard	1	Circuit setup
-Jumper Wires	—	Connections
+1. Component	Quantity	Purpose
+2. Arduino UNO	1	Main controller
+3. HC‑SR04 Ultrasonic Sensor	1	Hand detection
+4. Relay Module (5V)	2	Control pumps
+5. Mini DC Pump	2	Soap & water dispensing
+6. Battery Pack	1	External power for pumps
+7. Breadboard	1	Circuit setup
+8. Jumper Wires	—	Connections
 __________________________
  
 ### Working Principle
 
-Ultrasonic sensor continuously measures distance
-Hand detected within threshold range
-Arduino triggers Soap Pump via Relay
-Short programmed delay
-Water Pump activates automatically
-Pumps stop after fixed time
-System resets when hand is removed
+1. Ultrasonic sensor continuously measures distance
+2. Hand detected within threshold range
+3. Arduino triggers Soap Pump via Relay
+4. Short programmed delay
+5. Water Pump activates automatically
+6. Pumps stop after fixed time
+7. System resets when hand is removed
 __________________________
  
 ### Technical Concepts Applied
 
-Ultrasonic distance measurement
-Embedded automation using Arduino
-Relay‑based load isolation
-Sequential control logic
-Practical application of:
-KCL
-KVL
-Nodal & Mesh basics
+1. Ultrasonic distance measurement
+2. Embedded automation using Arduino
+3. Relay‑based load isolation
+4. Sequential control logic
+5. Practical application of:
+6. KCL
+7. KVL
+8. Nodal & Mesh basics
 __________________________
  
 ### Applications
 
-Smart washrooms
-Hospitals & clinics
-Schools & labs
-Public hygiene stations
-Home automation setups
+1. Smart washrooms
+2. Hospitals & clinics
+3. Schools & labs
+4. Public hygiene stations
+5. Home automation setups
 __________________________
 
 ### Limitations
 
-Fixed dispensing duration
-Sensor accuracy affected by angle
-No refill level detection
-Requires external battery maintenance
+1. Fixed dispensing duration
+2. Sensor accuracy affected by angle
+3. No refill level detection
+4. Requires external battery maintenance
 __________________________
 
 ### Future Scope
 
-1.IoT integration (ESP8266/ESP32)
-2.Adjustable dispensing
-3.Liquid level sensors
-4.Rechargeable power system
-5.Compact enclosure design
+1. IoT integration (ESP8266/ESP32)
+2. Adjustable dispensing
+3. Liquid level sensors
+4. Rechargeable power system
+5. Compact enclosure design
 __________________________
 
 ### Demo
